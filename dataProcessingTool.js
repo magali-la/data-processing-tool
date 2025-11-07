@@ -1,4 +1,9 @@
 function formatFullName(firstName, lastName) {
+    // handle edge case - no input
+    if (firstName.length == 0 || lastName.length == 0){
+        return "Invalid input"
+    }
+
     // convert the input first name and last name strings into an array
     let firstArr = Array.from(firstName);
     let lastArr = Array.from(lastName);
@@ -23,6 +28,6 @@ function formatFullName(firstName, lastName) {
 
 // declare variables to test function
 let first = 'johnny';
-let last = 'appleseed';
+let last = '';
 
 console.log(formatFullName(first, last));
